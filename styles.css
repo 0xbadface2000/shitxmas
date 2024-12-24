@@ -13,7 +13,7 @@
   --h2-font: 'Pacifico', cursive; /* Playful and celebratory */
 }
 
-
+/*******************************************************************************/
 /* Global Styles */
 .vertical-center {
   margin: 0;
@@ -22,36 +22,60 @@
   transform: translateY(-50%);
 }
 
+/* Animation for the fade-in effect */
+.fade-in {
+  animation: fadeInAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
 body {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    overflow-x: hidden;
-    line-height: 1.5;
-    transition: background 0.5s, color 0.5s;
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  line-height: 1.5;
+  transition: background 0.5s, color 0.5s;
 }
 
 .container {
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h2, h3 {
-  text-align: center;
-  font-family: var(--h2-font); /* Apply ocean font */
-  font-size: 4rem; /* Large font size */
-  color: var(--secondary-color); /* White text for contrast on black background */
-  text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color); /* Glowing text shadow */
-  letter-spacing: 1.5px; /* Increase letter spacing for a more spacious feel */
+text-align: center;
+font-family: var(--h2-font);
+font-size: 4rem;
+color: var(--secondary-color);
+text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color); /* Glowing text shadow */
+letter-spacing: 1.5px;
 }
 
 h3 {
   font-size: 2rem;
 }
 
+/*******************************************************************************/
 /*NAVBAR */
 
 /* Navbar Styles */
@@ -65,25 +89,23 @@ h3 {
 
 .flexcontainer {
   display: flex;
-  align-items: center; /* Centers items vertically */
+  align-items: center;
   justify-content: space-between; /* Distributes items horizontally */
   margin: 0 auto;
-  padding: 10px 20px; /* Adjust padding as needed */
+  padding: 10px 20px;
 }
 
 /* Logo */
 .logo {
   margin-right: auto;
-
   display: flex; /* Ensures the images are side by side */
   align-items: center; /* Centers the images vertically */
   gap: 10px; /* Adjust spacing between images */
   animation: glowLogo 2s infinite;
-
 }
 
 .logo img {
-  max-height: 50px; /* Adjust size as needed */
+  max-height: 50px;
   height: auto;
   width: auto;
 }
@@ -96,12 +118,13 @@ h3 {
       text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color);
   }
 }
+
 /* Navigation List */
 .nav-list {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  gap: 20px; /* Adjust spacing between links */
+  gap: 20px;
 }
 
 .nav-list li {
@@ -109,11 +132,11 @@ h3 {
 }
 
 .nav-list a {
-  color: var(--secondary-color); /* Text color */
+  color: var(--secondary-color);
   text-decoration: none;
-  font-size: 16px; /* Adjust font size as needed */
+  font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase; /* Optional for styling */
+  text-transform: uppercase;
   transition: color 0.3s;
 }
 
@@ -128,27 +151,26 @@ h3 {
 .icons {
   margin-left: auto;
   display: flex;
-  gap: 10px; /* Adjust spacing between icons */
+  gap: 10px;
 }
 
 .icons img {
-  width: 24px; /* Adjust icon size */
+  width: 24px;
   height: auto;
 }
 
-
-
+/*******************************************************************************/
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 6rem 2rem;
-    color: var(--text-color);
-    text-shadow: 1px 1px 2px black;
-    position: relative;
-    overflow: hidden;
-    /*background: radial-gradient(circle, var(--primary-color), var(--background-color));*/
-    background-image: url(images/herobg.jpg);
-    background-size: cover;
+  text-align: center;
+  padding: 6rem 2rem;
+  color: var(--text-color);
+  text-shadow: 1px 1px 2px black;
+  position: relative;
+  overflow: hidden;
+  /*background: radial-gradient(circle, var(--primary-color), var(--background-color));*/
+  background-image: url(images/herobg.jpg);
+  background-size: cover;
 }
 
 .herotext {
@@ -158,17 +180,17 @@ background: linear-gradient(
   rgba(var(--secondary-color-rgb), 0.6),
   rgba(var(--secondary-color-rgb), 0.4),
   rgba(var(--secondary-color-rgb), 0.1)
-);
-padding: 10px 20px;
-border-radius: 15%; /* Keeps your original rounded corners */
-text-align: center; /* Centers the text */
-font-size: 2rem; /* Fancy large text */
-font-weight: bold;
-color: white; /* Ensure contrast with the background */
-box-shadow: 0 0 20px rgba(var(--secondary-color-rgb), 0.8),
-            0 0 30px rgba(var(--secondary-color-rgb), 0.5),
-            0 0 40px rgba(var(--secondary-color-rgb), 0.3); /* Glowing effect */
-animation: pulse 3s infinite ease-in-out; /* Adds a cool pulsating glow */
+  );
+  padding: 10px 20px;
+  border-radius: 15%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 20px rgba(var(--secondary-color-rgb), 0.8),
+              0 0 30px rgba(var(--secondary-color-rgb), 0.5),
+              0 0 40px rgba(var(--secondary-color-rgb), 0.3); /* Glowing effect */
+  animation: pulse 3s infinite ease-in-out; /* pulsating glow */
 }
 
 /* Pulsating glow animation */
@@ -185,39 +207,6 @@ animation: pulse 3s infinite ease-in-out; /* Adds a cool pulsating glow */
   }
 }
 
-
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('stars.png') repeat;
-    animation: moveStars 20s linear infinite;
-    z-index: 1;
-}
-
-.twinkling {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('twinkling.png') repeat;
-    animation: moveTwinkling 5s linear infinite;
-    z-index: 2;
-}
-
-@keyframes moveStars {
-    from { background-position: 0 0; }
-    to { background-position: -10000px 10000px; }
-}
-
-@keyframes moveTwinkling {
-    from { background-position: 0 0; }
-    to { background-position: 10000px -10000px; }
-}
-
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -232,7 +221,13 @@ animation: pulse 3s infinite ease-in-out; /* Adds a cool pulsating glow */
     position: relative;
 }
 
-/* button */
+.hero img {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+/*******************************************************************************/
+/* Buttons */
 .cta {
   display: inline-block;
   text-decoration: none;
@@ -281,21 +276,22 @@ animation: pulse 3s infinite ease-in-out; /* Adds a cool pulsating glow */
   }
 }
 
+/*******************************************************************************/
 /* Separator */
 
 .separator {
-width: 100%;
-height: 10px;
-background: repeating-linear-gradient(
+  width: 100%;
+  height: 10px;
+  background: repeating-linear-gradient(
     -45deg,
     #b22222, /* Christmas red */
     #b22222 5px,
     #228b22 5px, /* Christmas green */
     #228b22 10px
-);
-position: relative;
-animation: sparkle 2s infinite ease-in-out, cashFlow 3s infinite ease-in-out;
-box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 10px rgba(0, 128, 0, 0.5);
+  );
+  position: relative;
+  animation: sparkle 2s infinite ease-in-out, cashFlow 3s infinite ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 10px rgba(0, 128, 0, 0.5);
 }
 
 @keyframes cashFlow {
@@ -315,38 +311,27 @@ box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 10px rgba(0, 128, 0, 0.5);
   }
 }
 
+/*********************************/
+/* General Styling for the Tokenomics Section */
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    color: var(--text-color);
-    position: relative;
-    overflow: hidden;
+.tokenomics {
+  padding: 50px 0;
+  background-color: var(--secondary-color);
 }
 
-/*********************************/
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
 
-  /* General Styling for the Tokenomics Section */
-  .tokenomics {
-      padding: 50px 0;
-      background-color: var(--secondary-color);
-  }
+h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
-  .container {
-      width: 80%;
-      margin: 0 auto;
-  }
-
-  h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 20px;
-      font-weight: bold;
-  }
-
-  /* Styling for the image and list */
+/* Styling for the image and list */
 .tokenomics .tokenomicscontent {
   display: flex;
   width: 100%;
@@ -370,53 +355,52 @@ padding: 5px;
 }
 
 .tokenomics ul {
-
-    list-style: none;
-    padding-left: 0;
-    display: inline-block;
-    vertical-align: top;
+  list-style: none;
+  padding-left: 0;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .tokenomics ul li {
-    background: var(--accent-color);
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 18px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: pop-in 0.5s forwards;
+  background: var(--accent-color);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pop-in 0.5s forwards;
 }
 
 .tokenomics ul li:nth-child(1) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .tokenomics ul li:nth-child(2) {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .tokenomics ul li:nth-child(3) {
-    animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 .tokenomics ul li:nth-child(4) {
-    animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 .tokenomics ul li:nth-child(5) {
-    animation-delay: 1.1s;
+  animation-delay: 1.1s;
 }
 
 /* Keyframe for Pop-in animation */
 @keyframes pop-in {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-
+/*******************************************************************************/
 /* about section */
 .about .cta {
   display: block;
@@ -427,27 +411,27 @@ padding: 5px;
 .about .container > div {
   display: flex;
   align-items: center; /* Centers content vertically */
-  justify-content: space-between; /* Ensures space between the text and image */
+  justify-content: space-between;
 }
 
 .about p {
   flex: 1; /* Allows the text to take up the remaining space */
-  margin: 20px; /* Adds space between text and image */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 128, 0, 0.1)); /* Subtle gradient background */
-  padding: 20px; /* Adds padding for better spacing */
-  border-radius: 10px; /* Rounded corners for a softer look */
-  color: #fff; /* White text for contrast */
-  font-size: 1.1rem; /* Slightly larger text for readability */
-  line-height: 1.6; /* Increases line height for better text spacing */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  margin: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 128, 0, 0.1));
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 /* Hover effect to add some life */
 .about p:hover {
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(0, 128, 0, 0.1)); /* Change gradient on hover */
-  transform: translateY(-5px); /* Subtle lift on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(0, 128, 0, 0.1));
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .about img {
@@ -458,64 +442,49 @@ padding: 5px;
   padding: 30px 0;
 }
 
+/*******************************************************************************/
+/* Footer */
 
-
-/* Optional: Add a fade-in effect to the image when it loads */
-.hero img {
-    opacity: 0;
-    animation: fadeIn 3s forwards;
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Animation for the fade-in effect */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.footer .icons {
+  display: block;
 }
 
-.fade-in {
-  animation: fadeInAnimation 2s ease-in-out forwards;
-}
-
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/*******************************************************************************/
+/* ICONS */
 
 .icons img {
-    width: 60px;
-    margin: 0 10px;
-    border-radius: 100px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+  width: 60px;
+  margin: 0 10px;
+  border-radius: 100px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .icons img:hover {
-    transform: scale(1.2) rotate(15deg); /* Enlarges and rotates the icon */
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.7), 0 0 25px var(--glow-color); /* Glowing effect */
-    filter: brightness(1.2) saturate(1.5); /* Brightens and intensifies the color */
+  transform: scale(1.2) rotate(15deg);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.7), 0 0 25px var(--glow-color);
+  filter: brightness(1.2) saturate(1.5);
 }
 
 .icons img:active {
-    transform: scale(1.1); /* Slightly shrink when clicked */
-    box-shadow: 0 0 8px rgba(0, 191, 255, 0.5); /* Subtle shadow on click */
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
 }
 
+/*******************************************************************************/
 /* ticker - generic */
 .ticker {
   display: flex;
   width: 100%;
-  animation: ticker-scroll 20s linear infinite; /* Adjust timing as needed */
-}
-
-.footer .icons {
-display: block;
+  animation: ticker-scroll 20s linear infinite;
 }
 
 .ticker a {
